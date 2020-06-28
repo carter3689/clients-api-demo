@@ -1,0 +1,13 @@
+DB_USER = 
+DB_PASS = 
+DB_NAME = 
+DB_HOST = 
+SECRET = 
+
+./cloud_sql_proxy -instances=xenon-monitor-281603:us-central1:codingtemple-test=tcp:5432
+
+gcloud builds submit --tag gcr.io/$PROJECT_ID/client-api --async
+
+/cloudsql/xenon-monitor-281603:us-central1:codingtemple-test
+
+35.232.121.127
